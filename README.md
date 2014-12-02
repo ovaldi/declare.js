@@ -32,6 +32,8 @@ Create a constructor using a compact notation for inheritance and prototype exte
       age:20
     });
     
-    child.sayName().sayAge();//Raoh  20
+    child.sayName().sayAge();
+    //Raoh
+    //20
 
 
