@@ -11,7 +11,9 @@ define(function () {
 
     function mixin(dest/*Object*/, mixins/*Object*/) {
         for (var p in mixins) {
-            dest[p] = mixins[p];
+            if(mixins.hasOwnProperty(p)) {
+                dest[p] = mixins[p];
+            }
         }
     }
 
@@ -55,9 +57,10 @@ define(function () {
         var ctor = makeCtor();
 
         if (superclass) {
-            ctor.prototype = ctor.fn = forceNew(superclass);
+            ctor.prototype = forceNew(superclass);
             ctor.superClass = superclass.prototype;
         }
+        ctor.fn = ctor.prototype;
         ctor.addMembers = addMembers;
         ctor.addMembers(overrides);
 
