@@ -1,7 +1,4 @@
-﻿/*
- *  Add by Raoh
- */
-define(function () {
+﻿define(function () {
     var xtor = function () {
     };
 
