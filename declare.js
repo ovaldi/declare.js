@@ -1,3 +1,6 @@
+﻿/*
+ *  Add by Raoh
+ */
 define(function () {
     var xtor = function () {
     };
