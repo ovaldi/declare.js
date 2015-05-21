@@ -1,4 +1,16 @@
-﻿define(function () {
+(function(factory){
+    if(typeof define === 'function' && define.amd){
+        define(factory);
+    }
+    else if(typeof module === 'object' && typeof exports === 'object'){
+        module.exports = factory();
+    }
+    else{
+        factory();
+    }
+})(function (){
+    "use strict";
+
     var xtor = function () {
     };
 
@@ -9,7 +21,7 @@
         return t;
     }
 
-    function mixin(/*Object*/dest, /*Object*/mixins) {
+    function mixin(/*Object*/dest, /*Object*/ mixins) {
         for (var p in mixins) {
             if(mixins.hasOwnProperty(p)) {
                 dest[p] = mixins[p];
@@ -17,7 +29,7 @@
         }
     }
 
-    function addMembers(members/*Object*/) {
+    function include(members) {
         var proto = this.prototype, member;
         for (var name in members) {
             if (members.hasOwnProperty(name)) {
@@ -29,6 +41,11 @@
                 proto[name] = member;
             }
         }
+    }
+
+    function extend(members){
+        var ctor = this.__proto__.constructor;
+        return declare(ctor,members);
     }
 
     function inherited(params) {
@@ -47,13 +64,7 @@
         return ctor;
     }
 
-    var declare = function (className, superclass, overrides) {
-        if (typeof className != "string") {
-            overrides = superclass;
-            superclass = className;
-            className = "";
-        }
-
+    var declare = function (superclass, overrides) {
         var ctor = makeCtor();
 
         if (superclass) {
@@ -61,17 +72,16 @@
             ctor.superClass = superclass.prototype;
         }
         ctor.fn = ctor.prototype;
-        ctor.addMembers = addMembers;
-        ctor.addMembers(overrides);
+        ctor.include = include;
+        ctor.include(overrides);
+        ctor.extend = extend;
 
-        ctor.$className = className;
-        ctor.fn.$className = className;
         ctor.fn.inherited = inherited;
         ctor.fn.constructor = ctor;
 
-        //TODO:将className的变量指向ctor
         return ctor;
     };
+
     declare.mixin = mixin;
 
     return declare;
