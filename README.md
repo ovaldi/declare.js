@@ -1,9 +1,19 @@
 declare
 =======
 
-Create a constructor using a compact notation for inheritance and prototype extension. 
+Create a constructor using a compact notation for inheritance and prototype extension.
 
-##Example##
+### Installation
+
+for Node
+
+    npm install oop-declare
+
+for Bower
+
+    bower install declare
+
+### Usage
 
     var Parent = declare(null,{
         init:function(params){
@@ -27,12 +37,12 @@ Create a constructor using a compact notation for inheritance and prototype exte
           return this;
         }
     });
-    
+
     var child = new Child({
       name:"Raoh",
       age:20
     });
-    
+
     child.sayName().sayAge();
     //Raoh
     //20
