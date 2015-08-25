@@ -9,7 +9,6 @@
         global.declare = factory();
     }
 })(function (){
-    "use strict";
 
     var xtor = function () {
     };
