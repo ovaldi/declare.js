@@ -6,6 +6,7 @@
   "authors": [
     {"name": "Raoh", "email": "232280074@qq.com"}
   ],
+  ignore: [],
   "description": "Create a constructor using a compact notation for inheritance and prototype extension.",
   "keywords": [
     "javascript",
