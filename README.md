@@ -18,7 +18,8 @@ Create a constructor using a compact notation for inheritance and prototype exte
 
     var Child = declare(Parent,{
         init:function(){
-          this.inherited(arguments);
+          Parent.prototype.init.apply(this,arguments);//strict mode
+          //this.inherited(arguments);//non strict mode
           return this;
         },
         sayAge:function(){
