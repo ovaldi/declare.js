@@ -1,0 +1,25 @@
+{
+  "name": "oop-declare",
+  "version": "0.0.1",
+  "description": "javascript declare oop class",
+  "main": "declare.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ovaldi/declare.js.git"
+  },
+  "keywords": [
+    "javascript",
+    "declare",
+    "oop",
+    "class"
+  ],
+  "author": "ovaldi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ovaldi/declare.js/issues"
+  },
+  "homepage": "https://github.com/Ovaldi/declare.js#readme"
+}
