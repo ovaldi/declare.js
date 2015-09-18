@@ -47,4 +47,6 @@ for Bower
     //Raoh
     //20
 
+### License
 
+    MIT
