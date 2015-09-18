@@ -1,6 +1,6 @@
 {
   "name": "oop-declare",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "javascript declare oop class",
   "main": "declare.js",
   "scripts": {
