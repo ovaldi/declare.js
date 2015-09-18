@@ -2,7 +2,7 @@
     if(typeof define === 'function' && define.amd){
         define(factory);
     }
-    else if(typeof module === 'object' && typeof exports === 'object'){
+    else if(typeof module === 'object' && typeof module.exports === 'object'){
         module.exports = factory();
     }
     else{
