@@ -1,7 +1,7 @@
 {
   "name": "declare",
   "main": "declare.js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/Ovaldi/declare.js",
   "authors": [
     {"name": "Raoh", "email": "232280074@qq.com"}
